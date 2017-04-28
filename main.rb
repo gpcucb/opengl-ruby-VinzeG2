@@ -30,7 +30,7 @@ def disp
    glTranslatef(0.0,0.0,-16.0);
 
    #body of the forbidden one
-   glTranslatef(0,BODY_HEIGHT/2,0);
+   glTranslatef(0,BODY_HEIGHT/3,0);
    glPushMatrix();
    glScalef(BODY_WIDTH,BODY_HEIGHT,BODY_LENGTH);
    glColor3f(0.0,0.3,0.8);
@@ -40,8 +40,8 @@ def disp
    #right arm of the forbidden one
    glPushMatrix();
    glTranslatef(-(BODY_WIDTH)/2,(BODY_HEIGHT-ARM_HEIGHT)/2,0);
-   glTranslatef(0,ARM_HEIGHT/2,0);
-   glRotatef(-30,0,0,1);
+   glTranslatef(0.3,ARM_HEIGHT/2,0);
+   glRotatef(-150,0,0,1);
    glTranslatef(0,-ARM_HEIGHT/2,0);
    glPushMatrix();
    glScalef(ARM_WIDTH,ARM_HEIGHT,ARM_LENGTH);
@@ -58,7 +58,7 @@ def disp
   glColor3f(0.0,0.3,0.8);
   glPushMatrix();
   glTranslatef((BODY_WIDTH)/2,(BODY_HEIGHT-ARM_HEIGHT)/2,0);
-  glTranslatef(0,ARM_HEIGHT/2,0);
+  glTranslatef(-0.5,ARM_HEIGHT/2,0);
   glRotatef(30,0,0,1);
   glTranslatef(0,-ARM_HEIGHT/2,0);
   glPushMatrix();
@@ -77,6 +77,8 @@ def disp
   glPushMatrix();
   glTranslatef(-(BODY_WIDTH-LEG_WIDTH)/2,-
   (BODY_HEIGHT+LEG_HEIGHT)/2,0);
+  glTranslatef(0,ARM_HEIGHT/2,0);
+  glRotatef(-15,100,90,150);
   glPushMatrix();
   glScalef(LEG_WIDTH,LEG_HEIGHT,LEG_LENGTH);
   glutSolidCube(1);
@@ -94,6 +96,8 @@ def disp
   glPushMatrix();
   glTranslatef((BODY_WIDTH-LEG_WIDTH)/2,-
   (BODY_HEIGHT+LEG_HEIGHT)/2,0);
+  glTranslatef(0,ARM_HEIGHT/2,0);
+  glRotatef(5,100,90,150);
   glPushMatrix();
   glScalef(LEG_WIDTH,LEG_HEIGHT,LEG_LENGTH);
   glutSolidCube(1);
