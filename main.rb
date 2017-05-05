@@ -17,6 +17,10 @@ LEG_LENGTH = 1.0
 HEAD_RADIUS = 1.1
 
 def disp
+
+=begin
+    
+
    glDepthFunc(GL_LEQUAL);
    glEnable(GL_DEPTH_TEST);
    glClearColor(0.0,0.0,0.0,0.0);
@@ -117,42 +121,51 @@ def disp
   glutSolidSphere(HEAD_RADIUS,10,10);
   glPopMatrix();
 
+  
+  glTranslatef(0,BODY_HEIGHT/2,0);
+  glPushMatrix();
+  glScalef(BODY_WIDTH,BODY_HEIGHT,BODY_LENGTH);
+  glColor3f(0.0,0.3,0.8);
+  glutSolidCube(1);
+  glPopMatrix();
 
-
-
-
-=begin
-
-    glBegin(GL_QUADS)
-        glColor3f(1,1,0)
-        glVertex(-0.5,-0.5,0.5)
-        glColor3f(0,1,1)
-        glVertex(0.5,-0.5,0.5)
-        glColor3f(1,0,1)
-        glVertex(0.5,0.5,-0.5)
-         glColor3f(1,1,1)
-        glVertex(-0.5,0.5,-0.5)
-    glEnd
-
-
-    glBegin(GL_TRIANGLES)
-        glColor3f(1,1,0)
-        glVertex(0.0,0.5,0.0)
-        glColor3f(0,1,1)
-        glVertex(-0.7,-0.5,0.0)
-        glColor3f(1,0,1)
-        glVertex(0.7,-0.5,0.0)
-    glEnd
 =end
 
-glTranslatef(0,BODY_HEIGHT/2,0);
-glPushMatrix();
-glScalef(BODY_WIDTH,BODY_HEIGHT,BODY_LENGTH);
-glColor3f(0.0,0.3,0.8);
-glutSolidCube(1);
-glPopMatrix();
 
-    glFlush
+   glDepthFunc(GL_LEQUAL);
+   glEnable(GL_DEPTH_TEST);
+   glClearColor(0.0,0.0,0.0,0.0);
+   glClearDepth(1.0);
+   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   gluPerspective(60.0,1.0,1.0,100.0);
+
+   glMatrixMode(GL_MODELVIEW);
+   glTranslatef(0.0,0.0,-10.0);
+   glRotatef(30,20,20,1);
+
+   #cube
+   glTranslatef(0,0,0);
+   glPushMatrix();
+   
+   glColor3f(0.0,0.3,0.8);
+   #glRotatef(30,20,20,1);
+   glutWireCube(1);
+   glPopMatrix();
+
+
+   #cube
+   glTranslatef(0,0,0);
+   glPushMatrix();
+   glScalef(5.5,5.5,5.5);
+   glColor3f(1.0,0.3,0.8);
+   #glRotatef(30,20,20,1);
+   glutWireCube(1);
+   glPopMatrix();
+
+
+glFlush
 
 end
 
