@@ -142,28 +142,49 @@ def disp
    gluPerspective(60.0,1.0,1.0,100.0);
 
    glMatrixMode(GL_MODELVIEW);
-   glTranslatef(0.0,0.0,-10.0);
+   glTranslatef(0.0,0.0,-15.0);
    glRotatef(30,20,20,1);
 
    #cube
    glTranslatef(0,0,0);
    glPushMatrix();
-   
    glColor3f(0.0,0.3,0.8);
-   #glRotatef(30,20,20,1);
    glutWireCube(1);
    glPopMatrix();
 
+   #cube rotated
+   glTranslatef(0,0,0);
+   glPushMatrix();
+   glRotatef(30,20,20,1);
+   glColor3f(0.3,0.5,0.5);
+   glutWireCube(1);
+   glPopMatrix();
 
-   #cube
+   #cube scaled
    glTranslatef(0,0,0);
    glPushMatrix();
    glScalef(5.5,5.5,5.5);
    glColor3f(1.0,0.3,0.8);
-   #glRotatef(30,20,20,1);
+   glutWireCube(1);   
+   glPopMatrix();
+
+   #cube translated
+   
+   glPushMatrix();
+   glColor3f(0.0,0.6,0.8);
+   glTranslatef(4.5,4.0,0);
    glutWireCube(1);
    glPopMatrix();
 
+   #cube
+   glTranslatef(0,0,0);
+   glPushMatrix();
+   glScalef(3.5,3.5,3.5);
+   glTranslatef(-1.8,0,0);
+   glRotatef(30,-10,20,1);
+   glColor3f(0.5,0.3,0.8);
+   glutWireCube(1);
+   glPopMatrix();
 
 glFlush
 
