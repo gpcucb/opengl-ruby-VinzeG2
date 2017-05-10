@@ -38,21 +38,16 @@ glDepthFunc(GL_LEQUAL);
 #sphere
    glTranslatef(0,0,0);
    glPushMatrix();
-   glColor3f(0.0,0.50,0.8);
-   glutSolidSphere(5,15,12);
-   glPopMatrix();
-
-   
-   glPushMatrix();
-   glColor3f(0.0,0.50,0.8);
-   glutSolidSphere(25,15,12);
+   glColor3f(0.0,0.80,0.8);
+   glutSolidSphere(4,100,300);
    glPopMatrix();
 
 
-   
+   glTranslatef(0,0,0);
    glPushMatrix();
-   glColor3f(0.0,0.50,0.8);
-   glutSolidSphere(-25,15,12);
+   glColor3f(0.0,0.80,0.8);
+   glTranslatef(0,0,10);
+   glutSolidSphere(4,100,300);
    glPopMatrix();
 
 glFlush
