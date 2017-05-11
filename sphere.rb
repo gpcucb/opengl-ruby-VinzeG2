@@ -39,7 +39,7 @@ glDepthFunc(GL_LEQUAL);
    glEnable(GL_NORMALIZE)
    glShadeModel(GL_SMOOTH)
 
-   position=[50,30,100]
+   position=[100,100,100]
    ambient=[1,1,1.1]
    color=[0.9,0.9,0.9,1.0]
 
@@ -57,20 +57,20 @@ glDepthFunc(GL_LEQUAL);
 	glMaterial(GL_FRONT, GL_SPECULAR, mat_specular)
 	glMaterial(GL_FRONT, GL_SHININESS, high_shininess)
 	glMaterial(GL_FRONT, GL_EMISSION, no_mat)
-   glutSolidSphere(3,100,200);
+   glutSolidSphere(2.4,100,200);
    glPopMatrix();
 
 
    glTranslatef(0,0,0);
    glPushMatrix();
-   glColor3f(1.0,0.80,0.8);
+   glColor3f(1.0,0.0,0.3);
    glTranslatef(5,0,0);
    glMaterial(GL_FRONT, GL_AMBIENT, no_mat)
    glMaterial(GL_FRONT, GL_DIFFUSE, mat_diffuse)
    glMaterial(GL_FRONT, GL_SPECULAR, mat_specular)
    glMaterial(GL_FRONT, GL_SHININESS, high_shininess)
    glMaterial(GL_FRONT, GL_EMISSION, no_mat)
-   glutSolidSphere(3,100,200);
+   glutSolidSphere(2.4,100,200);
    glPopMatrix();
 
 
@@ -83,19 +83,19 @@ glDepthFunc(GL_LEQUAL);
    glMaterial(GL_FRONT, GL_SPECULAR, mat_specular)
    glMaterial(GL_FRONT, GL_SHININESS, high_shininess)
    glMaterial(GL_FRONT, GL_EMISSION, no_mat)
-   glutSolidSphere(3,100,200);
+   glutSolidSphere(2.4,100,200);
    glPopMatrix();
 
    glTranslatef(0,0,0);
    glPushMatrix();
-   glColor3f(0.5,0.80,0.8);
+   glColor3f(0.5,0.8,0.0);
    glTranslatef(0,-5,0);
    glMaterial(GL_FRONT, GL_AMBIENT, no_mat)
    glMaterial(GL_FRONT, GL_DIFFUSE, mat_diffuse)
    glMaterial(GL_FRONT, GL_SPECULAR, mat_specular)
    glMaterial(GL_FRONT, GL_SHININESS, high_shininess)
    glMaterial(GL_FRONT, GL_EMISSION, no_mat)
-   glutSolidSphere(3,100,200);
+   glutSolidSphere(2.4,100,200);
    glPopMatrix();
 
 glFlush
