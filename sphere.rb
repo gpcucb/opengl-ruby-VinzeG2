@@ -48,7 +48,8 @@ glDepthFunc(GL_LEQUAL);
    glLightfv(GL_LIGHT0,GL_SPECULAR,color)
    glLightModelfv(GL_LIGHT_MODEL_AMBIENT,ambient)
 
-#sphere
+#spheres 
+
    glTranslatef(0,0,0);
    glPushMatrix();
    glColor3f(0.0,0.80,0.8);
